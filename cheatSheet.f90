@@ -24,6 +24,57 @@ program bug !fix
 !this program is full of errors
 real :: a,b,c
 read *,c
+read *,b
 a = b + c
 print *,a
 end program bug
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+program practice
+real :: i, a, b, c
+print *, 'What time is it? Type military time only'
+read *, i
+print *, 'Wait a couple of minutes then type the time '
+read *, a
+b = a - i
+print *, 'How old are you and your mom? '
+read *, i, a
