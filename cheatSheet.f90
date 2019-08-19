@@ -29,6 +29,10 @@ a = b + c
 print *,a
 end program bug
 
+!headspace analytical lang requirements: sql, hive, redshift, snowflake, Tableau server admin tasks, EMR, Athena, S3, python, R
+!implied: work on experience with swift and app inventor
+!!need a strong understanding of python, sql, R
+
 
 
 
