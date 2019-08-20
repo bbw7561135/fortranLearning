@@ -74,11 +74,18 @@ end program bug
 
 
 program practice
-real :: i, a, b, c
-print *, 'What time is it? Type military time only'
+implicit none !checks and verifies that all variables are correctly set
+!real :: i, a, b, c !commented but was uncommented originally
+integer :: i, a, b, c
+print *, 'What time is it? Type the minutes'
 read *, i
 print *, 'Wait a couple of minutes then type the time '
 read *, a
-b = a - i
-print *, 'How old are you and your mom? '
+IF (a > i) THEN
+  b = a - i
+ELSE 
+print *, 'How old are you and your mom in years? '
 read *, i, a
+c = a - i
+print *, 'The time difference was: ', b, ', The difference in age between you are your mom is: ', c
+end program practice
