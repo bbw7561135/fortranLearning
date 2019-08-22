@@ -1,7 +1,30 @@
-c this is a comment
-c using this website: https://www.fortrantutorial.com/
-c this is the library: http://www.silverfrost.com/ftn95-help/ftn95/idh_subroutines.aspx
-c SilverFrost compiler is suggested and so is PLATO IDE
+c links
+! using this website: https://www.fortrantutorial.com/ at basics (more data types - integer and character)
+
+! learn more about variables: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap02/var-type.html
+! https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
+
+! functions and procedures: https://en.wikibooks.org/wiki/Fortran/Fortran_procedures_and_functions
+! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 3rd slide
+
+! tutorial vid: https://www.youtube.com/watch?v=__2UgFNYgf8 at 7:16
+c links
+
+! this is the library: http://www.silverfrost.com/ftn95-help/ftn95/idh_subroutines.aspx
+! SilverFrost compiler is suggested and so is PLATO IDE
+
+!!left side declares what the variable is and the right declares the name of the variable
+!real :: is a real number
+!integer :: can hold an integer
+!complex :: can hold a complex number
+!logical :: can hold a boolean
+!character (len = 10) :: the variable is capable of holding a character string of certain length
+
+!Variable names must be between 1 and 32 letters or numbers in length with the first character being a letter
+
+
+!huge() returns the largest number of the variable's data type
+!tiny() returns the smallest number of the variable's data type
 
 program sum                         !name of program
 !an example of a program structure  !comment
