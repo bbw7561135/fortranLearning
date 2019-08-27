@@ -2,12 +2,17 @@ c links
 ! using this website: https://www.fortrantutorial.com/ at basics (more data types - integer and character)
 
 ! learn more about variables: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap02/var-type.html
-! https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
+! basics review sheet: https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
 
-! functions and procedures: https://en.wikibooks.org/wiki/Fortran/Fortran_procedures_and_functions
-! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 3rd slide
+! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 4th slide
 
-! tutorial vid: https://www.youtube.com/watch?v=__2UgFNYgf8 at 7:16
+! check this out, robbie recommends: https://learnxinyminutes.com/docs/fortran95/
+! fortran bible: https://www.fortran90.org/src/best-practices.html
+
+! learning vids: https://www.youtube.com/playlist?list=PLNmACol6lYY5_S8I4K29V2oI95nOCzQU8 41 vids
+! advanced vids: https://www.youtube.com/playlist?list=PLNmACol6lYY4wPUNCK03LOwVTBbca7Ix- 33 vids
+! modern fortran https://www.youtube.com/playlist?list=PLOW1pykD9NwIeDKcNxngoKYYqT7seZ2Dp 10 vids
+
 c links
 
 ! this is the library: http://www.silverfrost.com/ftn95-help/ftn95/idh_subroutines.aspx
@@ -26,7 +31,7 @@ c links
 !huge() returns the largest number of the variable's data type
 !tiny() returns the smallest number of the variable's data type
 
-program sum                         !name of program
+program sum                         !name of program, can have arguments going into the program(also known as a function in python)
 !an example of a program structure  !comment
 real :: answer,x,y                  !variable declaration
 print *, 'Type two numbers'         !output
