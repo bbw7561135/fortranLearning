@@ -1,10 +1,9 @@
 c links
 ! using this website: https://www.fortrantutorial.com/ at basics (more data types - integer and character)
+! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 4th slide
 
 ! learn more about variables: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap02/var-type.html
 ! basics review sheet: https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
-
-! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 4th slide
 
 ! check this out, robbie recommends: https://learnxinyminutes.com/docs/fortran95/
 ! fortran bible: https://www.fortran90.org/src/best-practices.html
@@ -31,7 +30,7 @@ c links
 !huge() returns the largest number of the variable's data type
 !tiny() returns the smallest number of the variable's data type
 
-program sum                         !name of program, can have arguments going into the program(also known as a function in python)
+program sum                       !name of program, can have arguments going into the program, similar to classes in java
 !an example of a program structure  !comment
 real :: answer,x,y                  !variable declaration
 print *, 'Type two numbers'         !output
@@ -57,63 +56,22 @@ a = b + c
 print *,a
 end program bug
 
-!headspace analytical lang requirements: sql, hive, redshift, snowflake, Tableau server admin tasks, EMR, Athena, S3, python, R
-!implied: work on experience with swift and app inventor
-!!need a strong understanding of python, sql, R
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-program practice
+!functions != programs
+real function tDifference(n) !reads and returns a positive real integer, similar to methods
 implicit none !checks and verifies that all variables are correctly set
 !real :: i, a, b, c !commented but was uncommented originally
 integer :: i, a, b, c
-print *, 'What time is it? Type the minutes'
-read *, i
-print *, 'Wait a couple of minutes then type the time '
-read *, a
+integer, intent(in) :: n     !takes in n and will not change the variable
+print *, 'How old are you and your sibling? Answer in that order '
+read *, i, a
 IF (a > i) THEN
   b = a - i
 ELSE 
-print *, 'How old are you and your mom in years? '
+  b = i - a
+print *, 'How old are you and your mom in years? Answer in that order
 read *, i, a
 c = a - i
-print *, 'The time difference was: ', b, ', The difference in age between you are your mom is: ', c
-end program practice
+print *, 'The age difference between you and your sibling was: ', b, 'The age difference between you are your mom is: ', c
+i = b + c
+tDifference = i
+end program tDifference
