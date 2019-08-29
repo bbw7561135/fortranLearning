@@ -30,48 +30,60 @@ c links
 !huge() returns the largest number of the variable's data type
 !tiny() returns the smallest number of the variable's data type
 
+!spacing is not essential, but aesthetically pleasing for myself
 program sum                       !name of program, can have arguments going into the program, similar to classes in java
-!an example of a program structure  !comment
-real :: answer,x,y                  !variable declaration
-print *, 'Type two numbers'         !output
-read *, x                           !input
-read *, y                           !input
-answer = x + y                      !arithmetic
-print *, 'The total is ', answer    !output
+  !an example of a program structure  !comment
+  real :: answer,x,y                  !variable declaration
+  print *, 'Type two numbers'         !output
+  read *, x                           !input
+  read *, y                           !input
+  answer = x + y                      !arithmetic
+  print *, 'The total is ', answer    !output
 end program sum                     !end of program
 
 program io
-real :: x,y,z
-print *, 'Enter values for x, y, z'
-read *, x,y,z
-print *, 'The values you entered for z, y, x are: ',z,y,x
+  real :: x,y,z
+  print *, 'Enter values for x, y, z'
+  read *, x,y,z
+  print *, 'The values you entered for z, y, x are: ',z,y,x
 end program io
 
 program bug !fix
-!this program is full of errors
-real :: a,b,c
-read *,c
-read *,b
-a = b + c
-print *,a
+  !this program is full of errors
+  real :: a,b,c
+  read *,c
+  read *,b
+  a = b + c
+  print *,a
 end program bug
 
-!functions != programs
+! functions != programs
 real function tDifference(n) !reads and returns a positive real integer, similar to methods
-implicit none !checks and verifies that all variables are correctly set
-!real :: i, a, b, c !commented but was uncommented originally
-integer :: i, a, b, c
-integer, intent(in) :: n     !takes in n and will not change the variable
-print *, 'How old are you and your sibling? Answer in that order '
-read *, i, a
-IF (a > i) THEN
-  b = a - i
-ELSE 
-  b = i - a
-print *, 'How old are you and your mom in years? Answer in that order
-read *, i, a
-c = a - i
-print *, 'The age difference between you and your sibling was: ', b, 'The age difference between you are your mom is: ', c
-i = b + c
-tDifference = i
+  implicit none !checks and verifies that all variables are correctly set
+  integer :: i, a, b, c
+  integer, intent(in) :: n     !takes in n and will not change the variable
+  print *, 'How old are you and your sibling? Answer in that order '
+  read *, i, a
+  IF (a > i) THEN
+    b = a - i
+  ELSE 
+    b = i - a
+  print *, 'How old are you and your mom in years? Answer in that order '
+  read *, i, a
+  c = a - i
+  print *, 'The age difference between you and your sibling was: ', b, 'The age difference between you are your mom is: ', c
+  i = b + c
+  tDifference = i ! returning a variable
 end program tDifference
+
+
+integer function factorial(n)
+  implicit none
+  integer, intent(in) :: n !w/out intent(in), new variables will be declared, also cannot manipulate this var later on
+  integer :: i, ans
+  ans = 1
+  do i = 1, n   !for loop
+    ans = ans * 1
+  end do
+  factorial = ans ! will error if you do not return something
+end function factorial
