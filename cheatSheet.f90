@@ -74,7 +74,7 @@ real function tDifference(n) !reads and returns a positive real integer, similar
   print *, 'The age difference between you and your sibling was: ', b, 'The age difference between you are your mom is: ', c
   i = b + c
   tDifference = i ! returning a variable, if set multiple times, will return most recent setting of the variable
-end program tDifference
+end function tDifference
 
 
 integer function factorial(n)
