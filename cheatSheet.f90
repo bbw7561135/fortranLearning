@@ -1,6 +1,6 @@
 c links
 ! using this website: https://www.fortrantutorial.com/ at basics (more data types - integer and character)
-! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 8th slide
+! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 14th slide
 
 ! learn more about variables: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap02/var-type.html
 ! basics review sheet: https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
@@ -75,7 +75,6 @@ real function tDifference(n) !reads and returns a positive real integer, similar
   i = b + c
   tDifference = i ! returning a variable, if set multiple times, will return most recent setting of the variable
 end function tDifference
-
 
 integer function factorial(n)
   implicit none
