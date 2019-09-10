@@ -1,6 +1,6 @@
 c links
 ! using this website: https://www.fortrantutorial.com/ at basics (more data types - integer and character)
-! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 14th slide
+! function explanation: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/F90-Subprograms.pdf at 19th slide
 
 ! learn more about variables: https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap02/var-type.html
 ! basics review sheet: https://www.oc.nps.edu/~bird/oc3030_online/fortran/basics/basics.html
@@ -46,6 +46,13 @@ program io
   print *, 'Enter values for x, y, z'
   read *, x,y,z
   print *, 'The values you entered for z, y, x are: ',z,y,x
+contains !heres how to include functions
+  real function ArithMean() ! a, b, c can only be accessed within this function but this function can also access x,y,z
+    implicit none
+    integer intent(in) :: a, b, c
+    integer :: q
+    q = (a + b + c) / 3
+    ArithMean = q
 end program io
 
 program bug !fix
@@ -86,4 +93,6 @@ integer function factorial(n)
   end do
   factorial = ans ! will error if you do not return something
 end function factorial
-!!learn
+
+! a function can contain other functions, internal functions cannot have internal functions
+! programs can have functions within
